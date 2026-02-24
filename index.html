@@ -50,15 +50,9 @@ body{font-family:'DM Sans',sans-serif;background:#1A3A52;color:#fff;min-height:1
 .footer{margin-top:80px;padding-top:24px;border-top:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
 .footer-brand{font-family:'Space Mono',monospace;font-size:11px;color:rgba(255,255,255,.25);letter-spacing:.08em}
 .footer-note{font-size:11px;color:rgba(255,255,255,.2);text-align:right}
-.multi-option{display:flex;align-items:flex-start;gap:12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);padding:14px 16px;cursor:pointer;transition:all .2s;margin-bottom:8px}
-.multi-option:hover{border-color:#1A7A8A;background:rgba(26,122,138,.1)}
-.multi-option.selected{border-color:#1A7A8A;background:rgba(26,122,138,.18)}
-.checkbox-box{min-width:16px;width:16px;height:16px;border:1px solid rgba(255,255,255,.25);flex-shrink:0;margin-top:2px;display:flex;align-items:center;justify-content:center;pointer-events:none}
-.multi-option.selected .checkbox-box{background:#1A7A8A;border-color:#1A7A8A}
-.checkbox-tick{color:#fff;font-size:10px;display:none;pointer-events:none}
-.multi-option.selected .checkbox-tick{display:block}
-.multi-label{font-size:14px;color:rgba(255,255,255,.7);line-height:1.4;pointer-events:none}
-.multi-option.selected .multi-label{color:#fff}
+.multi-btn{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.75);padding:14px 18px;font-family:'DM Sans',sans-serif;font-size:14px;cursor:pointer;text-align:left;transition:all .2s ease;line-height:1.4;width:100%;margin-bottom:8px;display:block}
+.multi-btn:hover{border-color:#1A7A8A;color:#fff;background:rgba(26,122,138,.12)}
+.multi-btn.selected{border-color:#D4860A;background:rgba(212,134,10,.15);color:#fff}
 </style>
 </head>
 <body>
@@ -103,16 +97,16 @@ body{font-family:'DM Sans',sans-serif;background:#1A3A52;color:#fff;min-height:1
 
 <div class="question-block">
   <div class="q-number">03 · The First Week</div>
-  <div class="q-text">What was the hardest part of the first week home?</div>
-  <div class="q-sub">Select all that apply.</div>
-  <div data-q="q3" data-type="multi">
-    <div class="multi-option" data-val="ndis" onclick="toggleOption(this,'q3')"><div class="checkbox-box"><span class="checkbox-tick">✓</span></div><div class="multi-label">NDIS / funding not sorted — equipment, supports, modifications not in place</div></div>
-    <div class="multi-option" data-val="family" onclick="toggleOption(this,'q3')"><div class="checkbox-box"><span class="checkbox-tick">✓</span></div><div class="multi-label">Family overwhelmed and unsure what to do or who to call</div></div>
-    <div class="multi-option" data-val="routine" onclick="toggleOption(this,'q3')"><div class="checkbox-box"><span class="checkbox-tick">✓</span></div><div class="multi-label">Bowel, bladder, skin routines falling apart without clinical support</div></div>
-    <div class="multi-option" data-val="mental" onclick="toggleOption(this,'q3')"><div class="checkbox-box"><span class="checkbox-tick">✓</span></div><div class="multi-label">Mental health — the emotional crash of being home without the ward structure</div></div>
-    <div class="multi-option" data-val="info" onclick="toggleOption(this,'q3')"><div class="checkbox-box"><span class="checkbox-tick">✓</span></div><div class="multi-label">No single place to find information — piecing it together from everywhere</div></div>
-    <div class="multi-option" data-val="contact" onclick="toggleOption(this,'q3')"><div class="checkbox-box"><span class="checkbox-tick">✓</span></div><div class="multi-label">Not knowing who to call when something went wrong</div></div>
-    <div class="multi-option" data-val="other_hard" onclick="toggleOption(this,'q3')"><div class="checkbox-box"><span class="checkbox-tick">✓</span></div><div class="multi-label">Something else entirely</div></div>
+  <div class="q-text">What was the single hardest part of the first week home?</div>
+  <div class="q-sub">Pick the one that hit hardest.</div>
+  <div class="options" data-q="q3" data-type="single">
+    <button class="option-btn" data-val="ndis">NDIS chaos — funding, equipment, modifications not in place</button>
+    <button class="option-btn" data-val="family">Family overwhelmed — nobody knew what to do or who to call</button>
+    <button class="option-btn" data-val="routine">Routines falling apart — bowel, bladder, skin without clinical backup</button>
+    <button class="option-btn" data-val="mental">The emotional crash — no ward structure, no container anymore</button>
+    <button class="option-btn" data-val="info">Information everywhere and nowhere — piecing it together alone</button>
+    <button class="option-btn" data-val="contact">Not knowing who to call when something went wrong</button>
+    <button class="option-btn" data-val="other">Something else entirely</button>
   </div>
 </div>
 
@@ -147,15 +141,15 @@ body{font-family:'DM Sans',sans-serif;background:#1A3A52;color:#fff;min-height:1
 
 <div class="question-block">
   <div class="q-number">06 · Your Role in This</div>
-  <div class="q-text">If R2H moves forward, what would you want to be involved in?</div>
-  <div class="q-sub">Select all that apply.</div>
-  <div data-q="q6" data-type="multi">
-    <div class="multi-option" data-val="codesign" onclick="toggleOption(this,'q6')"><div class="checkbox-box"><span class="checkbox-tick">✓</span></div><div class="multi-label">Co-design — shaping what the tool actually does and how it works</div></div>
-    <div class="multi-option" data-val="test" onclick="toggleOption(this,'q6')"><div class="checkbox-box"><span class="checkbox-tick">✓</span></div><div class="multi-label">Testing — trying early versions and giving blunt feedback</div></div>
-    <div class="multi-option" data-val="workingparty" onclick="toggleOption(this,'q6')"><div class="checkbox-box"><span class="checkbox-tick">✓</span></div><div class="multi-label">Working party — formal lived experience liaison role with Austin Health</div></div>
-    <div class="multi-option" data-val="spread" onclick="toggleOption(this,'q6')"><div class="checkbox-box"><span class="checkbox-tick">✓</span></div><div class="multi-label">Spreading the word — sharing this with others in the SCI community</div></div>
-    <div class="multi-option" data-val="watch" onclick="toggleOption(this,'q6')"><div class="checkbox-box"><span class="checkbox-tick">✓</span></div><div class="multi-label">Just staying informed — I want to know how this develops</div></div>
-    <div class="multi-option" data-val="nothing" onclick="toggleOption(this,'q6')"><div class="checkbox-box"><span class="checkbox-tick">✓</span></div><div class="multi-label">Nothing right now — but keep the feedback coming</div></div>
+  <div class="q-text">If R2H moves forward, what would you most want to be part of?</div>
+  <div class="q-sub">Pick the one that fits best.</div>
+  <div class="options" data-q="q6" data-type="single">
+    <button class="option-btn" data-val="codesign">Co-design — shaping what the tool does and how it works</button>
+    <button class="option-btn" data-val="test">Testing — trying early versions and giving blunt feedback</button>
+    <button class="option-btn" data-val="workingparty">Working party — formal lived experience role with Austin Health</button>
+    <button class="option-btn" data-val="spread">Spreading the word — sharing this across the SCI community</button>
+    <button class="option-btn" data-val="watch">Just staying informed — keep me updated</button>
+    <button class="option-btn" data-val="nothing">Nothing right now — but the feedback is yours</button>
   </div>
 </div>
 
@@ -201,7 +195,7 @@ updateProgress();
 });
 });
 
-// multi handled by toggleOption() inline
+// multi handled inline via toggleMulti()
 
 document.querySelectorAll(’[data-type=“scale”]’).forEach(function(group) {
 group.querySelectorAll(’.scale-btn’).forEach(function(btn) {
@@ -220,11 +214,11 @@ answers[el.dataset.q] = el.value;
 });
 });
 
-function toggleOption(el, q) {
-el.classList.toggle(‘selected’);
+function toggleMulti(btn, q) {
+btn.classList.toggle(‘selected’);
 if (!answers[q]) answers[q] = [];
-var val = el.getAttribute(‘data-val’);
-if (el.classList.contains(‘selected’)) {
+var val = btn.getAttribute(‘data-val’);
+if (btn.classList.contains(‘selected’)) {
 if (answers[q].indexOf(val) === -1) answers[q].push(val);
 } else {
 answers[q] = answers[q].filter(function(v) { return v !== val; });
