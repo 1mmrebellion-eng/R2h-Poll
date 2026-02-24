@@ -622,4 +622,164 @@
   <!-- FOOTER -->
   <div class="footer">
     <div class="footer-brand">R2H · REHAB TO HOME · MELBOURNE 2025</div>
+    <div class="footer-note">A lived experience initiative<br>in partnership with Austin Health</divr(--teal);
+  }
+
+  .checkbox-tick {
+    color: white;
+    font-size: 10px;
+    display: none;
+  }
+
+  .multi-option.selected .checkbox-tick { display: block; }
+
+  .multi-label {
+    font-size: 14px;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.4;
+  }
+
+  .multi-option.selected .multi-label { color: var(--white); }
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="badge">R2H · Community Pulse Check · 2025</div>
+    <h1 class="main-title">Does this<br><em>exist</em> for you?</h1>
+    <p class="subtitle">We're building something that wasn't there when we came home. Before we build it, we want to know if it's what the community actually needs. This is not a survey. It's a conversation starter. Blunt answers only.</p>
+    <div class="manifesto-line">
+      "Progress is measured in millimetres. Every 1mm is a KO to The Suck."
+      <span>— CARE Manifesto, Daisy X. · The philosophical foundation of R2H</span>
+    </div>
+  </div>
+
+  <!-- MAIN FORM -->
+  <div id="poll-form">
+
+    <div class="progress-text">QUESTION PROGRESS</div>
+    <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+
+    <!-- Q1 -->
+    <div class="question-block">
+      <div class="q-number">01 · Your Experience</div>
+      <div class="q-text">What's your relationship to spinal cord injury?</div>
+      <div class="q-sub">Select the one that fits best.</div>
+      <div class="options" data-q="q1" data-type="single">
+        <button class="option-btn" data-val="sci">I have a spinal cord injury</button>
+        <button class="option-btn" data-val="family">I'm a family member or carer of someone with SCI</button>
+        <button class="option-btn" data-val="peer">I work in peer support or lived experience roles</button>
+        <button class="option-btn" data-val="clinical">I work in SCI clinical or allied health</button>
+        <button class="option-btn" data-val="other">Other connection to the SCI community</button>
+      </div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="question-block">
+      <div class="q-number">02 · The Discharge Experience</div>
+      <div class="q-text">When you left rehab — or watched someone leave — how prepared did it feel?</div>
+      <div class="q-sub">No right answer. Just honest.</div>
+      <div class="options" data-q="q2" data-type="single">
+        <button class="option-btn" data-val="1">Completely blindsided. Nothing could have prepared us.</button>
+        <button class="option-btn" data-val="2">Mostly unprepared. We figured it out the hard way.</button>
+        <button class="option-btn" data-val="3">Somewhat prepared but the gaps were significant.</button>
+        <button class="option-btn" data-val="4">Reasonably prepared. Some rough patches but manageable.</button>
+        <button class="option-btn" data-val="5">Well prepared. The transition went smoothly.</button>
+      </div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="question-block">
+      <div class="q-number">03 · The First Week</div>
+      <div class="q-text">What was the hardest part of the first week home?</div>
+      <div class="q-sub">Select all that apply.</div>
+      <div class="options" data-q="q3" data-type="multi">
+        <div class="multi-option" data-val="ndis"><div class="checkbox-box"><span class="checkbox-tick">✓</span></div><div class="multi-label">NDIS / funding not sorted — equipment, supports, modifications not in place</div></div>
+        <div class="multi-option" data-val="family"><div class="checkbox-box"><span class="checkbox-tick">✓</span></div><div class="multi-label">Family overwhelmed and unsure what to do or who to call</div></div>
+        <div class="multi-option" data-val="routine"><div class="checkbox-box"><span class="checkbox-tick">✓</span></div><div class="multi-label">Bowel, bladder, skin routines falling apart without clinical support</div></div>
+        <div class="multi-option" data-val="mental"><div class="checkbox-box"><span class="checkbox-tick">✓</span></div><div class="multi-label">Mental health — the emotional crash of being home without the ward structure</div></div>
+        <div class="multi-option" data-val="info"><div class="checkbox-box"><span class="checkbox-tick">✓</span></div><div class="multi-label">No single place to find information — piecing it together from everywhere</div></div>
+        <div class="multi-option" data-val="contact"><div class="checkbox-box"><span class="checkbox-tick">✓</span></div><div class="multi-label">Not knowing who to call when something went wrong</div></div>
+        <div class="multi-option" data-val="other_hard"><div class="checkbox-box"><span class="checkbox-tick">✓</span></div><div class="multi-label">Something else entirely</div></div>
+      </div>
+    </div>
+
+    <div class="section-divider"><span>About R2H</span></div>
+
+    <!-- Q4 -->
+    <div class="question-block">
+      <div class="q-number">04 · The Concept</div>
+      <div class="q-text">R2H is a free digital guide — no download, works on any device — that walks you through discharge in four stages and is designed to be deleted when you don't need it anymore. Does that sound useful?</div>
+      <div class="q-sub">Based on what you know so far.</div>
+      <div class="options" data-q="q4" data-type="single">
+        <button class="option-btn" data-val="yes_need">Yes — I needed exactly this and it didn't exist</button>
+        <button class="option-btn" data-val="yes_useful">Yes — it sounds genuinely useful</button>
+        <button class="option-btn" data-val="maybe">Maybe — depends on how it's done</button>
+        <button class="option-btn" data-val="no">No — I don't think it would have helped my situation</button>
+        <button class="option-btn" data-val="unsure">Not sure yet</button>
+      </div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="question-block">
+      <div class="q-number">05 · The Tone</div>
+      <div class="q-text">R2H is built on a principle of radical honesty — no toxic positivity, no inspirational framing, no "you've got this!" when things genuinely suck. How important is that to you?</div>
+      <div class="q-sub">1 = doesn't matter · 5 = that's everything</div>
+      <div class="scale-wrap" data-q="q5" data-type="scale">
+        <button class="scale-btn" data-val="1">1</button>
+        <button class="scale-btn" data-val="2">2</button>
+        <button class="scale-btn" data-val="3">3</button>
+        <button class="scale-btn" data-val="4">4</button>
+        <button class="scale-btn" data-val="5">5</button>
+      </div>
+      <div class="scale-labels"><span>doesn't matter</span><span>everything</span></div>
+    </div>
+
+    <!-- Q6 -->
+    <div class="question-block">
+      <div class="q-number">06 · Your Role in This</div>
+      <div class="q-text">If R2H moves forward, what would you want to be involved in?</div>
+      <div class="q-sub">Select all that apply.</div>
+      <div class="options" data-q="q6" data-type="multi">
+        <div class="multi-option" data-val="codesign"><div class="checkbox-box"><span class="checkbox-tick">✓</span></div><div class="multi-label">Co-design — shaping what the tool actually does and how it works</div></div>
+        <div class="multi-option" data-val="test"><div class="checkbox-box"><span class="checkbox-tick">✓</span></div><div class="multi-label">Testing — trying early versions and giving blunt feedback</div></div>
+        <div class="multi-option" data-val="workingparty"><div class="checkbox-box"><span class="checkbox-tick">✓</span></div><div class="multi-label">Working party — formal lived experience liaison role with Austin Health</div></div>
+        <div class="multi-option" data-val="spread"><div class="checkbox-box"><span class="checkbox-tick">✓</span></div><div class="multi-label">Spreading the word — sharing this with others in the SCI community</div></div>
+        <div class="multi-option" data-val="watch"><div class="checkbox-box"><span class="checkbox-tick">✓</span></div><div class="multi-label">Just staying informed — I want to know how this develops</div></div>
+        <div class="multi-option" data-val="nothing"><div class="checkbox-box"><span class="checkbox-tick">✓</span></div><div class="multi-label">Nothing right now — but keep the feedback coming</div></div>
+      </div>
+    </div>
+
+    <!-- Q7 -->
+    <div class="question-block">
+      <div class="q-number">07 · The Honest One</div>
+      <div class="q-text">What would make R2H fail? What's the thing that could go wrong?</div>
+      <div class="q-sub">Optional — but the most valuable question on this page. Blunt answers only.</div>
+      <textarea class="open-input" data-q="q7" data-type="text" placeholder="If you're going to say something, say it straight..."></textarea>
+    </div>
+
+    <!-- SUBMIT -->
+    <div class="submit-section">
+      <p class="submit-note">Anonymous unless you choose to share your contact below. No data is sold. No spam. This is a community conversation, not a mailing list.</p>
+      <textarea class="open-input" data-q="contact" data-type="text" placeholder="Optional: name / email / preferred way to be contacted if you want to be part of this" style="min-height:56px; margin-bottom:20px;"></textarea>
+      <button class="submit-btn" id="submitBtn" onclick="submitPoll()">Submit — I've said my piece</button>
+    </div>
+
+  </div>
+
+  <!-- THANK YOU STATE -->
+  <div class="thankyou" id="thankyou">
+    <div class="thankyou-icon">✊</div>
+    <h2>That's a 1mm forward.</h2>
+    <p>Your response has been recorded. It goes directly into the design of R2H — not into a spreadsheet nobody reads. The SCI community is building this. You're part of it.</p>
+    <p class="manifesto-end">"Care, not because it's easy. Care, because it's yours."</p>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-brand">R2H · REHAB TO HOME · MELBOURNE 2025</div>
     <div class="footer-note">A lived experience initiative<br>in partnership with Austin Health</div
